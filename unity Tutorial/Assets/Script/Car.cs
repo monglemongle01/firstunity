@@ -25,9 +25,11 @@ public class Car : MonoBehaviour
     // 여러 개의 변수가 있을 때 서로 고유의 메모리 공간을 가집니다.
     char character = 'A';
 
-    int integer = 100;
+    public int integer = 100;
 
-    float pi = 3.141592f;
+    private float pi = 3.141592f;
+
+
 
     string name = "Sonata";
 
@@ -55,7 +57,6 @@ public class Car : MonoBehaviour
         // 변수는 프로그램이 실행되는 동안 값을 바꿀 수 있으며,
         // 원래 저장되어 있는 값은 새로 저장되는 값에 의해 지워집니다.
         character = 'B';
-        integer = 999;
         pi = 6.675f;
         name = "Avante";
 
@@ -67,4 +68,45 @@ public class Car : MonoBehaviour
     }
     #endregion
 
+    #region 함수
+    // 하나의 특별한 목적의 작업을 수행하기
+    // 위해 독립적을 설계된 코드의 집합입니다.
+
+    private void Stop()
+    {
+        Debug.Log("정지");
+
+    }
+
+    private void Update()
+    {
+        // 조건문이란?
+        // 어떤 조건이 주어질 때 해당 조건에 따라
+        //동작을 수행하도록 실행하는 명령문입니다.
+
+        // if문이란?
+        // 어떤 특정한 조건을 비교하여 조건이 맞다면
+        // 실행되는 명령문입니다.
+
+        // GetkeyDown : KEY를 눌렀을 때
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Stop();
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("핸들 조정");
+        }
+        else
+        {
+            Debug.Log("시동 꺼짐");
+        }
+        // else if 문
+        // if문의 조건이 틀릴 때 else if문의 조건이 맞다면
+        // 실행되는 명령문입니다.
+
+        // else
+        // if 문의 조건이 틀릴 때
+    }
+    #endregion
 }
