@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Unity Trans late/Translate.unity
+- path: Assets/Unity Collision/Scence/Collision.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
