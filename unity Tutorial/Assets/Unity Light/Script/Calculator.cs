@@ -30,8 +30,7 @@ public class Light : MonoBehaviour
     void Start()
     {
         //30
-        Debug.Log (Add(10, 20));
+        Debug.Log(Add(10, 20));
 
     }
-
 }
